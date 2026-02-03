@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Seres</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Detalle del ser {{ ser.id }}</h1>
+
+    <ul>
+      <li><strong>Nombre:</strong> {{ ser.nombre }}</li>
+      <li><strong>Raza:</strong> {{ ser.raza }}</li>
+      <li><strong>Título:</strong> {{ ser.titulo }}</li>
+      <li><strong>Es dios:</strong> {{ ser.esDios }}</li>
+      <li><strong>Fecha:</strong> {{ ser.fechaDeCreacion }}</li>
+    </ul>
+
+    <p>
+      <a href="/seres">← Volver al listado</a>
+    </p>
+  </div>
+</body>
+
+</html>

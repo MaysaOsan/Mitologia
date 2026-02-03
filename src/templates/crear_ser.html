@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear Ser</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Crear nuevo ser</h1>
+
+    <form method="post">
+      <p>
+        <label>Nombre</label><br>
+        <input type="text" name="nombre" required>
+      </p>
+
+      <p>
+        <label>Raza</label><br>
+        <input type="text" name="raza" required>
+      </p>
+
+      <p>
+        <label>Título</label><br>
+        <input type="text" name="titulo">
+      </p>
+
+      <p>
+        <label>
+          <input type="checkbox" name="esDios">
+          ¿Es dios?
+        </label>
+      </p>
+
+      <p>
+        <label>Fecha de creación</label><br>
+        <input type="date" name="fechaDeCreacion">
+      </p>
+
+      <button type="submit">Crear</button>
+    </form>
+
+    <p>
+      <a href="/seres">← Volver al listado</a>
+    </p>
+  </div>
+</body>
+</html>

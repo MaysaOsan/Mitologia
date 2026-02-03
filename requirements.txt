@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+jinja2
+python-multipart
+sqlmodel
+pymysql
+cryptography
+
+psycopg2-binary

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eliminar ser</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Eliminar ser</h1>
+
+    <p>¿Estás seguro de que quieres eliminar este ser?</p>
+
+    <ul>
+      <li><strong>Nombre:</strong> {{ ser.nombre }}</li>
+      <li><strong>Raza:</strong> {{ ser.raza }}</li>
+      <li><strong>Título:</strong> {{ ser.titulo }}</li>
+    </ul>
+
+    <form method="post">
+      <button type="submit">Sí, eliminar</button>
+    </form>
+
+    <p>
+      <a href="/seres">← Cancelar</a>
+    </p>
+  </div>
+</body>
+</html>

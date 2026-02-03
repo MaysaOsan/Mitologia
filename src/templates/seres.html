@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">    
+    <title>Seres</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Lista de seres</h1>
+
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>NOMBRE</th>
+        <th>RAZA</th>
+        <th>TÍTULO</th>
+        <th>ES DIOS</th>
+        <th>FECHA</th>
+        <th>Operaciones</th>
+      </tr>
+
+      {% for ser in seres %}
+      <tr>
+        <td>{{ ser.id }}</td>
+        <td>{{ ser.nombre }}</td>
+        <td>{{ ser.raza }}</td>
+        <td>{{ ser.titulo }}</td>
+        <td>{{ ser.esDios }}</td>
+        <td>{{ ser.fechaDeCreacion }}</td>
+        <td>
+            <a href="/seres/{{ ser.id }}">Ver</a> |  
+            <a href="/seres/editar/{{ ser.id }}">Editar</a> |
+            <a href="/seres/eliminar/{{ ser.id }}">Eliminar</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</body>
+
+</html>

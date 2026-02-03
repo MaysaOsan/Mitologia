@@ -1,0 +1,23 @@
+name: fastapi-seres
+
+services: 
+  fastapi-app:  
+    build:  
+      context: .  
+      dockerfile: Dockerfile  
+    container_name: fastapi-app-seres 
+    restart: always  
+    ports:  
+      - "8000:8000"  
+    depends_on:  
+      - fastapi-db  
+  fastapi-db:  
+    image: postgres 
+    container_name: fastapi-db-seres  
+    environment:  
+      POSTGRES_DB: seriesdb
+      POSTGRES_USER: quevedo
+      POSTGRES_PASSWORD: 1234
+    ports:  
+      - "5432:5432"  
+  
