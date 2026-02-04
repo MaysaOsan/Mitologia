@@ -78,12 +78,14 @@ tr:hover {
 }
 
 footer {
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
   padding: 20px 0;
   font-size: 0.9em;
   color: #666;
-  border-top: 1px solid #ddd;
 }
+
 
 
 
