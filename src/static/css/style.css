@@ -50,6 +50,12 @@ a:hover {
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
+.footer {
+  background: transparent;
+  box-shadow: none;
+}
+
+
 /* Tablas */
 table {
   width: 100%;
@@ -78,13 +84,13 @@ tr:hover {
 }
 
 footer {
-  max-width: 900px;
-  margin: 0 auto;
+  margin-top: auto;
   text-align: center;
   padding: 20px 0;
   font-size: 0.9em;
   color: #666;
 }
+
 
 
 
