@@ -12,6 +12,14 @@ body {
   color: #2c2c2c;
   line-height: 1.6;
   padding: 40px;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
 }
 
 /* Títulos */
@@ -70,5 +78,13 @@ tr:hover {
 /* Botón-enlace */
 .action-link {
   font-weight: 500;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
 }
 
