@@ -19,15 +19,17 @@ def get_session():
         yield session #sirve para que el contexto de la sesión se cierre
 
 def init_db():
-    SQLModel.metadata.drop_all(engine)
+#    SQLModel.metadata.drop_all(engine)
     SQLModel.metadata.create_all(engine)
-    with Session(engine) as session:
-        session.add(Ser(id=1, nombre="Cronos", raza="titan",titulo="Titan del Tiempo", esDios=False, fechaDeCreacion="2024-1-18"))
-        session.add(Ser(id=2, nombre="Gaia", raza="titan", titulo="Titanide de la Tierra", esDios= False, fechaDeCreacion="2024-11-12"))
-        session.add(Ser(id=3, nombre="Zeus", raza="dios", titulo="Dios del cielo, el trueno y el rayo", esDios=True, fechaDeCreacion="2024-1-18"))
-        session.add(Ser(id=4, nombre="Aquiles", raza="Semidios", titulo="guerrero de Troya", esDios=False, fechaDeCreacion="2025-3-5"))
-        session.commit()
-        #session.refesh_all() #actualiza los datos en la base de datos
+
+    if os.getenv("RENDER") is None:
+        with Session(engine) as session:
+            session.add(Ser(id=1, nombre="Cronos", raza="titan",titulo="Titan del Tiempo", esDios=False, fechaDeCreacion="2024-1-18"))
+            session.add(Ser(id=2, nombre="Gaia", raza="titan", titulo="Titanide de la Tierra", esDios= False, fechaDeCreacion="2024-11-12"))
+            session.add(Ser(id=3, nombre="Zeus", raza="dios", titulo="Dios del cielo, el trueno y el rayo", esDios=True, fechaDeCreacion="2024-1-18"))
+            session.add(Ser(id=4, nombre="Aquiles", raza="Semidios", titulo="guerrero de Troya", esDios=False, fechaDeCreacion="2025-3-5"))
+            session.commit()
+            #session.refesh_all() #actualiza los datos en la base de datos
 
 
 
